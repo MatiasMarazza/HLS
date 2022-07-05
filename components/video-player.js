@@ -9,6 +9,7 @@ export default function VideoPlayer({ src }) {
     if (!video) return
 
     video.controls = true
+    video.loop = true
     if (video.canPlayType('application/vnd.apple.mpegurl')) {
       // This will run in safari, where HLS is supported natively
       video.src = src
@@ -26,7 +27,7 @@ export default function VideoPlayer({ src }) {
 
   return (
     <>
-      <video muted autoPlay loop ref={videoRef} />
+      <video muted autoPlay ref={videoRef} />
       <style jsx>{`
         video {
           width: 100%;
