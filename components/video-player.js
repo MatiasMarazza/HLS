@@ -27,7 +27,7 @@ export default function VideoPlayer({ src }) {
 
   return (
     <>
-      <video muted autoPlay ref={videoRef} />
+      <video muted autoPlay loop ref={videoRef} />
       <style jsx>{`
         video {
           width: 100%;
